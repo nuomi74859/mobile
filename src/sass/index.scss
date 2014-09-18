@@ -6,6 +6,34 @@
 .whiteColor {
   color:$whiteColor;
 }
+.yellowColor0 {
+  color:$yellowColor0;
+}
+.yellowColor1 {
+  color:$yellowColor1;
+}
+.yellowColor2 {
+  color: $yellowColor2;
+}
+.yellowColor3 {
+  color: $yellowColor3;
+}
+.blackColor {
+  color:$blackColor;
+}
+.grayColor0 {
+  color:$grayColor0;
+}
+.grayColor1 {
+  color: $grayColor1;
+}
+.grayColor2 {
+  color: $grayColor2;
+}
+.blueColor {
+  color:$blueColor;
+}
+
 
 .fontSize0 {
   font-size: $fontSize0;
@@ -25,7 +53,15 @@
 .fontSizeSmall {
   font-size: $fontSizeSmall;
 }
-
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  border-color: $grayColor1;
+  resize: none;
+  @include border-radius(0px);
+  @include box-shadow(0px 0px 0px);
+}
 p {
   margin: 0;
 }
@@ -69,4 +105,33 @@ body {
 }
 .imgo-paid-title {
   color: $orangeColor;
+}
+.imgo-radio-warp {
+  padding: {
+    top: 10px;
+    bottom: 10px;
+    left: 2px;
+    right: 2px;
+  };
+  border: {
+    left: 1px solid $grayColor1;
+    right: 1px solid $grayColor1;
+    bottom: 1px solid $grayColor1;
+  }
+  background: $whiteColor;
+}
+.imgo-radio {
+  position: relative;
+  top:9px;
+}
+.imgo-button {
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  font-size: $fontSize2;
+  background: $orangeColor;
+  color: $whiteColor;
+  cursor: pointer;
+  @include border-radius(3px);
 }
