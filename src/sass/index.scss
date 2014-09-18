@@ -1,0 +1,72 @@
+@import "compass/css3";
+@import "global";
+.orangeColor {
+  color: $orangeColor;
+}
+.whiteColor {
+  color:$whiteColor;
+}
+
+.fontSize0 {
+  font-size: $fontSize0;
+}
+.fontSize1 {
+  font-size: $fontSize1;
+}
+.fontSize2 {
+  font-size: $fontSize2;
+}
+.fontSize3 {
+  font-size: $fontSize3;
+}
+.fontSize4 {
+  font-size: $fontSize4;
+}
+.fontSizeSmall {
+  font-size: $fontSizeSmall;
+}
+
+p {
+  margin: 0;
+}
+body {
+  background: $grayColor2;
+}
+.user-info {
+  font-size: $fontSizeSmall;
+  border: {
+    bottom: 1px solid $grayColor1;
+  };
+  background: $whiteColor;
+  color:$blackColor;
+}
+.imgo-head {
+  padding: {
+    top:15px;
+    bottom: 15px;
+  };
+  font-weight: bold;
+  font-size:$fontSize0;
+  background:$orangeColor;
+  color:$whiteColor;
+}
+.imgo-img-warp {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  padding:5px;
+  border:1px solid $grayColor1;
+  @include border-radius(50%);
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.imgo-username {
+  font-size:$fontSize2;
+  color:$yellowColor0;
+}
+.imgo-paid-title {
+  color: $orangeColor;
+}

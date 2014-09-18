@@ -1,0 +1,17 @@
+{
+    "name": "touch",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "grunt": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-concat":"*",
+        "grunt-contrib-watch":"*",
+        "grunt-contrib-compass":"*",
+        "grunt-contrib-sass":"*",
+        "grunt-contrib-htmlmin":"*",
+        "grunt-contrib-imagemin":"*",
+        "grunt-contrib-connect":"*",
+        "load-grunt-tasks":"*"
+    }
+}
