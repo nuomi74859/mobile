@@ -1,6 +1,9 @@
 .clearfix {
   clear: both;
 }
+* {
+  outline: none;
+}
 div, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -9,6 +12,11 @@ div, *:after, *:before {
 body {
   font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 a {
   display: inline-block;
