@@ -158,6 +158,7 @@ img {
   color: $orangeColor;
 }
 .imgo-radio-warp {
+  height: 40px;
   padding: {
     top: 10px;
     bottom: 13px;
@@ -174,7 +175,9 @@ img {
 .imgo-radio {
   width: 12px;
   position: relative;
-  top:9px;
+  margin: 0 !important;
+  margin-right: 3px !important;
+//  top:9px;
 }
 .imgo-radio-margin {
   margin: {
@@ -386,7 +389,10 @@ img {
   };
 }
 .imgo-label-margin {
-  margin: {
-    left: 8px !important;
-  };
+  margin: 0px !important;
+  font-weight: 100;
+}
+.imgo-span3 {
+  width: 25%;
+  float: left;
 }
