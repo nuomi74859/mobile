@@ -11,13 +11,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 a {
+  display: inline-block;
   text-decoration: none;
   &:active {
     text-decoration: none;
   }
   &:hover {
     text-decoration: none;
-    color:white;
   }
 }
 @import "index";

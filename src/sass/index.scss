@@ -34,7 +34,9 @@
   color:$blueColor;
 }
 
-
+.fontBold {
+  font-weight: bold;
+}
 .fontSize0 {
   font-size: $fontSize0;
 }
@@ -53,12 +55,42 @@
 .fontSizeSmall {
   font-size: $fontSizeSmall;
 }
+.vertical-middle {
+  vertical-align: middle;
+}
+.vertical {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+
+  display: -o-box;
+  -o-box-orient: horizontal;
+  -o-box-pack: center;
+  -o-box-align: center;
+
+  display: -ms-box;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+}
 textarea {
   width: 100%;
   max-width: 100%;
   padding: 10px;
   border-color: $grayColor1;
   resize: none;
+  -webkit-appearance: none;
   @include border-radius(0px);
   @include box-shadow(0px 0px 0px);
 }
@@ -66,7 +98,9 @@ p {
   margin: 0;
 }
 body {
+  min-width: 320px;
   background: $grayColor2;
+  color: $blackColor;
 }
 .user-info {
   font-size: $fontSizeSmall;
@@ -76,10 +110,18 @@ body {
   background: $whiteColor;
   color:$blackColor;
 }
+img {
+  max-width: 100%;
+}
+.imgo-info {
+  min-height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+}
 .imgo-head {
   padding: {
-    top:15px;
-    bottom: 15px;
+    top:10px;
+    bottom: 10px;
   };
   font-weight: bold;
   font-size:$fontSize0;
@@ -87,15 +129,24 @@ body {
   color:$whiteColor;
 }
 .imgo-img-warp {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   display: inline-block;
+  vertical-align: middle;
   padding:5px;
   border:1px solid $grayColor1;
   @include border-radius(50%);
   overflow: hidden;
   img {
     width: 100%;
+    height: 100%;
+  }
+}
+.imgo-logo {
+  height: 70px;
+  display: inline-block;
+
+  img {
     height: 100%;
   }
 }
@@ -109,7 +160,7 @@ body {
 .imgo-radio-warp {
   padding: {
     top: 10px;
-    bottom: 10px;
+    bottom: 13px;
     left: 2px;
     right: 2px;
   };
@@ -121,17 +172,221 @@ body {
   background: $whiteColor;
 }
 .imgo-radio {
+  width: 12px;
   position: relative;
   top:9px;
+}
+.imgo-radio-margin {
+  margin: {
+    top:3px !important;
+    left: -13px !important;
+  }
 }
 .imgo-button {
   width: 100%;
   display: inline-block;
   padding: 10px;
   text-align: center;
-  font-size: $fontSize2;
   background: $orangeColor;
-  color: $whiteColor;
   cursor: pointer;
   @include border-radius(3px);
+  &:hover {
+    color: $whiteColor;
+  }
+}
+.pay-button {
+  border:1px solid $grayColor1;
+  background: $whiteColor;
+  &:hover {
+    color: $blackColor;
+//    border-color: $orangeColor;
+  }
+}
+.imgo-select-warp {
+  padding: {
+    top: 10px;
+    bottom: 10px;
+  };
+}
+.imgo-select {
+  width: 100%;
+  padding: {
+    top:10px;
+    bottom: 10px;
+    left: 3px;
+    right: 3px;
+  };
+  border: 1px solid $grayColor1;
+  input {
+    position: absolute;
+    z-index: -1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  img {
+//    width: 20%;
+    height: 40%;
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  &:active {
+    color:$orangeColor;
+    border-color: $orangeColor;
+    img {
+      opacity: 1;
+    }
+  }
+  &:focus {
+    color:$orangeColor;
+    border-color: $orangeColor;
+    img {
+      opacity: 1;
+    }
+  }
+  &:hover {
+    color:$orangeColor;
+    border-color: $orangeColor;
+    img {
+      opacity: 1;
+    }
+  }
+}
+.imgo-border {
+  border: {
+    bottom: 1px solid $grayColor1;
+  }
+}
+.imgo-qipao {
+  position: relative;
+  padding: 10px;
+  border: 1px solid $yellowColor3;
+  background: $yellowColor2;
+  @include border-radius(3px);
+  .qipao1 {
+    width: 10px;
+    position: absolute;
+    top:10px;
+    left: -10px;
+  }
+  .qipao2 {
+    width: 10px;
+    position: absolute;
+    top:10px;
+    right: -10px;
+  }
+}
+.imgo-paid {
+  display: block;
+}
+.imgo-payment {
+  display: none;
+}
+.imgo-form {
+  margin: {
+    top:15px;
+    bottom: 15px;
+  };
+}
+.imgo-panel {
+  padding: {
+    top:20px;
+    bottom: 20px;
+  };
+  font-size: $fontSize4;
+  border: {
+    top: 1px solid $grayColor1;
+    bottom: 1px solid $grayColor1;
+  };
+  background: $whiteColor;
+  color:$blackColor;
+}
+.imgo-box {
+  padding: {
+    top:20px;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+  };
+  border: 1px solid $grayColor1;
+  background: $whiteColor;
+  @include border-radius(3px);
+}
+.imgo-deal {
+  text-decoration: underline ;
+  border: none;
+  background: none;
+}
+.imgo-modal-head {
+  height: 10px;
+  border: {
+    top-left-radius:3px;
+    top-right-radius:3px;
+  };
+  background: $orangeColor;
+}
+.record-box {
+  margin: {
+    left: -10px;
+    right: -10px;
+  };
+  padding: {
+    left: 10px;
+    right: 10px;
+  };
+  border: 1px solid $grayColor1;
+  background: $whiteColor;
+  @include border-radius(3px);
+}
+.record-border {
+  margin: {
+    top:10px;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+  };
+  border: {
+    bottom: 1px solid $grayColor1;
+  }
+}
+.record-form {
+  &:first-child {
+    margin: {
+      top:10px;
+    };
+  }
+  &:last-child {
+    margin: {
+      bottom: 10px;
+    };
+  }
+}
+.imgo-padding-left {
+  padding-left: 5px;
+}
+.imgo-padding-right {
+  padding-right: 5px;
+}
+.imgo-background-white {
+  background: $whiteColor;
+}
+.imgo-background-gray {
+  background: $grayColor2;
+}
+.imgo-radius {
+  border-radius: 3px !important;
+//  @include border-radius(3px); !important;
+}
+.imgo-line {
+  margin: {
+    top:3px;
+    bottom: 3px;
+  };
+}
+.imgo-label-margin {
+  margin: {
+    left: 8px !important;
+  };
 }
