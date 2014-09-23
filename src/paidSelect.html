@@ -63,7 +63,7 @@
         </div>
         <div class="row imgo-select-warp fontSizeSmall text-center">
             <div class="col-xs-4 imgo-padding-right">
-                <label class="imgo-select">
+                <label class="imgo-select active">
                     <input type="radio" name="options" id="option1" autocomplete="off" checked> 30元/30天
                     <img src="/images/3.png">
                 </label>
@@ -99,8 +99,11 @@
     </div>
 </div>
 
-
-
+<!--遮罩层-->
+<div class="imgo-back">
+    <img src="/images/back.png">
+</div>
+<!--支付确认-->
 <div class="imgo-payment">
     <div class="container-fluid text-center user-info">
         <div class="row" style="margin-bottom: 16px;">
@@ -583,6 +586,13 @@ $('#imgo-daifu').on({
         $('.imgo-paid').hide();
         $('.imgo-payment').show();
     }
+});
+$('.imgo-back').click(function(){
+    $(this).hide();
+});
+$('.imgo-select').click(function(){
+    $('.imgo-select').removeClass('active');
+    $(this).addClass('active');
 });
 </script>
 </body>
