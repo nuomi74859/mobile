@@ -35,7 +35,7 @@
     </div>
     <div class="row" style="margin-bottom: 20px;">
         <div class="col-xs-12 fontSize4 text-left">
-            <p>欢迎使用代付功能，您可以邀请好友为您购买芒果互联网电视VIP会员。</p>
+            <p>您可邀请好友为您买单芒果TV互联网电视VIP会员。</p>
         </div>
     </div>
     <!--<div class="row" style="margin-bottom: 20px;">-->
@@ -53,8 +53,8 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <textarea style="height: 100px;">
-芒果TV的VIP有木有啊，送一个嘛，你最好了！
+            <textarea id="imgo-speak" style="height: 100px;">
+公子，人家就想要个芒果VIP，你就应了嘛！
             </textarea>
         </div>
     </div>
@@ -62,27 +62,27 @@
         <div class="col-xs-12">
             <div class="imgo-radio-warp fontSizeSmall text-center">
                 <div class="imgo-span3">
-                    <input type="radio"  class="imgo-radio vertical-middle" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                    <input type="radio"  class="imgo-radio vertical-middle" name="inlineRadioOptions" id="inlineRadio1" value="1" checked>
                     <label for="inlineRadio1" class="vertical-middle imgo-label-margin">
-                        撒娇卖萌
+                        暧昧
                     </label>
                 </div>
                 <div class="imgo-span3">
-                    <input type="radio"  class="imgo-radio vertical-middle" name="inlineRadioOptions" id="inlineRadio2" value="option1">
+                    <input type="radio"  class="imgo-radio vertical-middle" name="inlineRadioOptions" id="inlineRadio2" value="2">
                     <label for="inlineRadio2" class="vertical-middle imgo-label-margin">
-                        江湖救急
+                        义气
                     </label>
                 </div>
                 <div class="imgo-span3">
-                    <input type="radio"  class="imgo-radio vertical-middle" name="inlineRadioOptions" id="inlineRadio3" value="option1">
+                    <input type="radio"  class="imgo-radio vertical-middle" name="inlineRadioOptions" id="inlineRadio3" value="3">
                     <label for="inlineRadio3" class="vertical-middle imgo-label-margin">
-                        友情至上
+                        友情
                     </label>
                 </div>
                 <div class="imgo-span3">
-                    <input type="radio"  class="imgo-radio vertical-middle" name="inlineRadioOptions" id="inlineRadio4" value="option1">
+                    <input type="radio"  class="imgo-radio vertical-middle" name="inlineRadioOptions" id="inlineRadio4" value="4">
                     <label for="inlineRadio4" class="vertical-middle imgo-label-margin">
-                        威逼利诱
+                        调皮
                     </label>
                 </div>
             </div>
@@ -107,7 +107,18 @@
 
 <script src="/widget/jquery/jquery.js"></script>
 <script>
-
+$(document).ready(function(){
+    var imgoSpeak = [
+        '公子，人家就想要个芒果VIP，你就应了嘛！',
+        '等着看芒果Live Show，江湖救急，帮忙来一发VIP！',
+        '朋友们，滴水之恩当涌泉相报，请帮我代付VIP!',
+        '生日礼物就免了吧，送我个芒果VIP就满足了！'
+    ];
+    $('.imgo-radio').change(function(){
+        var num = $(this).val() - 1;
+        $('#imgo-speak').val(imgoSpeak[num]);
+    });
+});
 </script>
 </body>
 </html>
