@@ -181,7 +181,7 @@
                 </button>
             </div>
             <div class="col-xs-6" style="padding-left:5px;">
-                <button  data-toggle="modal" data-target="#payState" class="imgo-button pay-button  fontSizeSmall">
+                <button  data-toggle="modal" data-target="#agreementState" class="imgo-button pay-button  fontSizeSmall">
                     <img src="/images/wx.png" style="height: 26px;">
                     微信支付
                 </button>
@@ -563,7 +563,7 @@
         </div>
     </div>
 </div>
-<!--支付状态-->
+<!--协议状态-->
 <div class="modal fade text-center" id="payState" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="imgo-pole"></div>
     <div class="modal-dialog vertical-middle" style="width: 92%;margin: 0;">
@@ -575,6 +575,29 @@
                 <!--<div>-->
                     <!--<a class="imgo-button pay-button grayColor0">支付遇到问题</a>-->
                 <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--支付状态-->
+<div class="modal fade text-center" id="agreementState" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="imgo-pole"></div>
+    <div class="modal-dialog vertical-middle" style="width: 92%;margin: 0;">
+        <div class="modal-content">
+            <div class="imgo-modal-head"></div>
+            <div class="modal-body text-center">
+                <div style="margin-top: 10px;margin-bottom: 10px;">
+                    <p>
+                        您必须同意《芒果付费服务协议》的条款，才能购买！
+                    </p>
+                </div>
+                <!--<div>-->
+                <!--<a class="imgo-button pay-button grayColor0">支付遇到问题</a>-->
+                <!--</div>-->
+            </div>
+            <div class="modal-footer grayColor0" data-dismiss="modal" style="text-align: center;">
+                <span>关闭</span>
             </div>
         </div>
     </div>
@@ -595,6 +618,11 @@ $('.imgo-select').click(function(){
     $('.imgo-select').removeClass('active');
     $(this).addClass('active');
 });
+
+setTimeout(function(){
+    $('#agreementState').modal('show');
+},3000);
+
 </script>
 </body>
 </html>
