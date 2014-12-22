@@ -64,20 +64,23 @@
         <div class="row imgo-select-warp fontSizeSmall text-center">
             <div class="col-xs-4 imgo-padding-right">
                 <label class="imgo-select active" style="background: white;">
-                    <input type="radio" name="options" id="option1" autocomplete="off" checked> 30元/30天
-                    <img src="/images/3.png">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                    <img class="img-t" src="/images/30.png">
+                    <img class="img-b" src="/images/30checked.png">
                 </label>
             </div>
             <div class="col-xs-4 imgo-padding">
                 <label class="imgo-select" style="background: white;">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> 160元/180天
-                    <img src="/images/3.png">
+                    <input type="radio" name="options" id="option2" autocomplete="off">
+                    <img class="img-t" src="/images/160.png">
+                    <img class="img-b" src="/images/160checked.png">
                 </label>
             </div>
             <div class="col-xs-4 imgo-padding-left">
                 <label class="imgo-select" style="background: white;">
-                    <input type="radio" name="options" id="option3" autocomplete="off"> 300元/360天
-                    <img src="/images/3.png">
+                    <input type="radio" name="options" id="option3" autocomplete="off">
+                    <img class="img-t" src="/images/360.png">
+                    <img class="img-b" src="/images/360checked.png">
                 </label>
             </div>
         </div>
@@ -100,9 +103,9 @@
 </div>
 
 <!--遮罩层-->
-<div class="imgo-back">
-    <img src="/images/back.png">
-</div>
+<!--<div class="imgo-back">-->
+    <!--<img src="/images/back.png">-->
+<!--</div>-->
 <!--支付确认-->
 <div class="imgo-payment">
     <div class="container-fluid text-center user-info">
@@ -618,9 +621,9 @@ $('.imgo-select').click(function(){
     $(this).addClass('active');
 });
 
-setTimeout(function(){
-    $('#agreementState').modal('show');
-},3000);
+//setTimeout(function(){
+//    $('#agreementState').modal('show');
+//},3000);
 
 </script>
 </body>

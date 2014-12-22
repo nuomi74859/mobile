@@ -1,5 +1,6 @@
 @import "compass/css3";
 @import "global";
+@import "ease";
 .orangeColor {
   color: $orangeColor;
 }
@@ -219,13 +220,15 @@ input[type=checkbox] {
 .imgo-select {
   width: 100%;
   position: relative;
-  padding: {
-    top:10px;
-    bottom: 10px;
-    left: 3px;
-    right: 3px;
-  };
-  border: 1px solid $grayColor1;
+  margin: 0;
+  @include transition(all .3s $easeOutBack);
+//  padding: {
+//    top:10px;
+//    bottom: 10px;
+//    left: 3px;
+//    right: 3px;
+//  };
+//  border: 1px solid $grayColor1;
   input {
     position: absolute;
     z-index: -1;
@@ -233,19 +236,23 @@ input[type=checkbox] {
     opacity: 0;
   }
   img {
-//    width: 20%;
-    height: 40%;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    filter: alpha(opacity=0);
-    opacity: 0;
+    width: 100%;
+    height: auto;
+//    position: absolute;
+//    right: 0px;
+//    bottom: 0px;
+//    filter: alpha(opacity=0);
+//    opacity: 0;
+  }
+  .img-b {
+    display: none;
   }
   &.active {
-    color:$orangeColor;
-    border-color: $orangeColor;
-    img {
-      opacity: 1;
+    .img-t {
+      display: none;
+    }
+    .img-b {
+      display: block;
     }
   }
 //  &:active {
